@@ -46,7 +46,8 @@
         /* 小程序特有相关 */
         "appid" : "wx73ba5ba918fea2e3",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "checkSiteMap": false
         },
         "usingComponents" : true
     },
