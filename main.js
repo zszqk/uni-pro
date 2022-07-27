@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import {$http} from "@escook/request-miniprogram"
+import store from "@/store/store.js"
 uni.$http = $http
 // 配置请求的根路径
 $http.baseUrl = 'https://www.uinav.com'
@@ -30,7 +31,8 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 const app = new Vue({
-    ...App
+    ...App,
+    store
 })
 app.$mount()
 // #endif
@@ -41,7 +43,8 @@ import App from './App.vue'
 export function createApp() {
   const app = createSSRApp(App)
   return {
-    app
+    app,
+    store
   }
 }
 // #endif

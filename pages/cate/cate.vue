@@ -30,7 +30,9 @@
 </template>
 
 <script>
+import badgeMix from '@/mixins/tabbar-badge.js' 
   export default {
+    mixins:[badgeMix],
     data() {
       return {
         // 窗口的可用高度=屏幕高度-navigationBar高度-tabBar高度
@@ -78,7 +80,7 @@
       // 点击三级分类跳转到商品列表页面
       gotoGoodsList(item) {
         uni.navigateTo({
-          url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+          url: '/subpkg/goods_list/goods_list?cid=' + item.cat_id
         })
       },
       // 跳转到分包中的搜索页面
@@ -86,8 +88,9 @@
         uni.navigateTo({
           url: '/subpkg/search/search'
         })
-      }
-    }
+      },
+
+    },
   }
 </script>
 
